@@ -98,7 +98,7 @@ def plot_performance_min_samples(X_treino,y_treino,X_teste,y_teste):
     plt.show()
 
 
-    return pd.DataFrame([arr_min_samples,arr_ac_treino, arr_ac_teste])
+    return pd.DataFrame(np.array([arr_min_samples,arr_ac_treino, arr_ac_teste]).T,columns=["min_samples","ac_treino","ac_teste"])
 
 def validacao():
     X_train, X_temp, y_train, y_temp = train_test_split(X, y, test_size=0.4, random_state=1)
